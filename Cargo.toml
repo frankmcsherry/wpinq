@@ -1,0 +1,21 @@
+[package]
+name = "wpinq"
+version = "0.1.0"
+authors = ["Frank McSherry <fmcsherry@me.com>"]
+
+[dependencies]
+#timely="0.5"
+timely = "0.6"  #{ path = "../timely-dataflow" }
+#timely_communication = "0.5" #{ path = "../timely-dataflow/communication"}
+abomonation = "0.5"
+fnv="*"
+rand="*"
+arrayvec = { git = "https://github.com/bluss/arrayvec" }
+regex = "0.2.6"
+
+[profile.release]
+opt-level = 3
+debug = true
+rpath = false
+lto = false
+debug-assertions = false
